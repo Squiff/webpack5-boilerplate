@@ -4,17 +4,17 @@ A webpack 5 boilerplate using a common default configuration
 
 ## NPM Scripts
 
-<span style="color:orange; font-weight:bold;">start</span> creates a production build in dist folder  
-<span style="color:orange; font-weight:bold;">build</span> starts and opens a dev server on port 5001  
-<span style="color:orange; font-weight:bold;">build-stats</span> creates a webpack-stats.json file in the project root. This can be used with tools such as [Webpack Analyzer](https://webpack.github.io/analyse/) or [Webpack vizualizer](https://chrisbateman.github.io/webpack-visualizer/)
+**start** creates a production build in dist folder  
+**build** starts and opens a dev server on port 5001  
+**build-stats** creates a webpack-stats.json file in the project root. This can be used with tools such as [Webpack Analyzer](https://webpack.github.io/analyse/) or [Webpack vizualizer](https://chrisbateman.github.io/webpack-visualizer/)
 
 ## Development
 
-run <span style="color:orange; font-weight:bold;">npm run start</span> to launch the dev server. Hot module replacement has been configured.
+run **npm run start** to launch the dev server. Hot module replacement has been configured.
 
 ## Production Build
 
-To start a production build run <span style="color:orange; font-weight:bold;">npm run build</span>. The build has been configured according to the below.
+To start a production build run **npm run build**. The build has been configured according to the below.
 
 ### Javascript
 

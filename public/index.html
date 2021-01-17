@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+    <title>Starter App</title>
+</head>
+
+<body>
+
+    <div class="container">
+        <h2>NPM Scripts</h2>
+        <ul>
+            <li><span class="npm-script">start</span> creates a production build in dist folder</li>
+            <li><span class="npm-script">build</span> starts and opens a dev server on port 5001</li>
+            <li><span class="npm-script">build-stats</span> creates a webpack-stats.json file in the project root. This
+                can be used with tools
+                such as <a href="https://webpack.github.io/analyse/">Webpack Analyzer</a>
+                or <a href="https://chrisbateman.github.io/webpack-visualizer/">Webpack vizualizer</a>
+            </li>
+        </ul>
+    </div>
+
+    <div class="container">
+        <h2>Development</h2>
+        <p>
+            run <span class="npm-script">npm run start</span> to launch the dev server. Hot module replacement has been
+            configured.
+        </p>
+    </div>
+
+    <div class="container">
+        <h2>Production Build</h2>
+        <p>
+            To start a production build run <span class="npm-script">npm run build</span>.
+            The build has been configured according to the below.
+        </p>
+        <h3>Javascript</h3>
+        <p>
+            The entry point is <span class="file-location">/src/main.js</span>.
+            Files are built into <span class="file-location">/dist/js</span><br />
+            Babel has been configured to support browsers defined in .browerslistrc<br />
+            Babel will provide the neccessary polyfills when they are required<br />
+        </p>
+        <h3>HTML</h3>
+        <p>
+            Scripts and styles from the build will be injected into index.html
+        </p>
+        <h3>Static Assets</h3>
+        <p>
+            Static assets in <span class="file-location">/public</span> will be copied directly into the build output
+        </p>
+        <h3>Assets</h3>
+        <p>
+            Assets that have been imported in javascript will be included in the build.<br />
+            <strong>Images</strong> will use the same file structure that were used in the src folder e.g.
+            <span class="span file-location">
+                src/img/folder1/folder2/xyz.png
+            </span> will be built to <span class="file-location">dist/img/folder1/folder2/xyz.png</span>
+        </p>
+
+        <img id="imgCompiling" alt="Compiling" />
+        <h3 style="margin-top: 15px;">Styles</h3>
+        <p>
+            Styles imported in javascript will be included in the build. <br />
+            CSS will be minified and output to <span class="file-location">/dist/css</span> folder<br />
+            <span class="customfont">Custom fonts can be used via @font-face and a relative url</span><br />
+            Fonts will be output to <span class="file-location">/dist/fonts</span><br />
+            PostCss has been configured for auto prefixing. Only prefixes that are required for browsers in
+            .browerslistrc will be used used<br />
+        </p>
+        <h3>Caching</h3>
+        <p>
+            JS,CSS and images will be given content hashes in the file name for cache control
+        </p>
+
+        <h3>Code Splitting</h3>
+        <p>
+            The webpack runtime has been split out to a separate bundle, <span
+                class="file-location">/dist/js/runtime.js</span>, so changes
+            in the runtime do not cause unchanged code to be re-served<br />
+            If there are vendor libraries that are used throughout the app, they could benefit from being split out
+            from the main bundle because they do not change as often (e.g. React/React Dom). If this is required see the
+            commented out <strong>optimization.splitChunks.cacheGroups</strong> setting in
+            <strong>webpack.prod.js</strong> <br />
+            <br />
+            Webpack is also setup out of the box for code splitting using dynamic
+            imports.
+        </p>
+    </div>
+
+
+
+
+
+</body>
+
+</html>
